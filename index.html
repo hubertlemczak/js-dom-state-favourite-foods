@@ -1,36 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Food List</title>
     <meta charset="UTF-8" />
-</head>
-<body>
+  </head>
+  <body>
     <h1>My Favourite Foods</h1>
     <form>
-        <label>
-            Add Food
-            <input id="food" />
-        </label>
-        <button type='submit'>Add</button>
+      <label>
+        Add Food
+        <input id="food" name="food" />
+      </label>
+      <button type="submit">Add</button>
     </form>
     <ul>
-        <li>Pizza</li>
+      <li>Pizza</li>
     </ul>
-    <script>
-        const foodElement = document.querySelector('#food')
-        const foodList = document.querySelector('ul')
 
-        const form = document.querySelector('form')
-        form.addEventListener('submit', function(event) {
-            event.preventDefault()
-            
-            const li = document.createElement('li')
-            li.innerText = foodElement.value
-            foodList.appendChild(li)
-
-            foodElement.value = ""
-        })
-    </script>
-</body>
-
+    <script src="./index.js"></script>
+  </body>
 </html>
